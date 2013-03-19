@@ -1,6 +1,6 @@
 /*-- Palette Colors --*/
 /* blue: 004c96
-   pink: ff8bfe
+   pink: f200f5
    
 */
 
@@ -12,16 +12,50 @@
 
 /*-- header --*/
 
-header{
- 
+#header{
+    height:200px;
+	color:#fff;
+	padding: 5px 10px 5px 10px;
+	margin: 15px;
+	background: #f200f5;
+	border: 2px dashed rgba(255,255,255,0.4);
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	-moz-box-shadow: 0 0 0 4px #e2e2e2, 2px 1px 4px 4px rgba(10,10,0,.5);
+	-webkit-box-shadow: 0 0 0 4px #e2e2e2, 2px 1px 4px 4px rgba(10,10,0,.5);
+	box-shadow: 0 0 0 4px #e2e2e2, 2px 1px 6px 4px rgba(10,10,0,.5);
 }
+
+/* --- nav -- */
+nav{
+ height:50px;
+	color:#fff;
+	/*padding: 5px 10px 5px 10px;*/
+	/*margin: 15px;*/
+	background: #f200f5;
+	border: 2px dashed rgba(255,255,255,0.4);
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	-moz-box-shadow: 0 0 0 4px #e2e2e2, 2px 1px 4px 4px rgba(10,10,0,.5);
+	-webkit-box-shadow: 0 0 0 4px #e2e2e2, 2px 1px 4px 4px rgba(10,10,0,.5);
+	box-shadow: 0 0 0 4px #e2e2e2, 2px 1px 6px 4px rgba(10,10,0,.5);
+}
+
+#nav{
+   width: 90px;
+}
+
+
 
 /*--- footer --*/
 footer{
     height:200px;
+	color:#fff;
 	padding: 5px 10px 5px 10px;
 	margin: 15px;
-	background: #ff8bfe;
+	background: #f200f5;
 	border: 2px dashed rgba(255,255,255,0.4);
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
