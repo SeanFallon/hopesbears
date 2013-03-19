@@ -1,9 +1,41 @@
-footer {
-    clear:both;
-    overflow:hidden;
-    font-size:16px;
-    line-height:1.3;
+/*-- Palette Colors --*/
+/* blue: 004c96
+   pink: ff8bfe
+   
+*/
+
+/* ---- wrapper -----*/
+
+#box-container{
+   padding-left: 90px;
 }
+
+/*-- header --*/
+
+header{
+ 
+}
+
+/*--- footer --*/
+footer{
+    height:200px;
+	padding: 5px 10px 5px 10px;
+	margin: 15px;
+	background: #ff8bfe;
+	border: 2px dashed rgba(255,255,255,0.4);
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	-moz-box-shadow: 0 0 0 4px #e2e2e2, 2px 1px 4px 4px rgba(10,10,0,.5);
+	-webkit-box-shadow: 0 0 0 4px #e2e2e2, 2px 1px 4px 4px rgba(10,10,0,.5);
+	box-shadow: 0 0 0 4px #e2e2e2, 2px 1px 6px 4px rgba(10,10,0,.5);
+}
+
+/*---- footer boxes. They aren't actually in the footer
+----*/
+
+
+
 #footer-boxes {
     -moz-column-count:2;
     -moz-column-gap:10px;
@@ -15,9 +47,10 @@ footer {
 .footer-box {
     margin:0 0 10px 0;
     display:inline-block;
-    width:262px;
-    height:140px;
+    width:282px;
+    height:220px;
     padding:15px;
+	border: 2px dashed rgba(255,255,255,0.4);
     background:#e6e2df;
     color:#b2aaa4;
     -webkit-transition:all 0.2s ease;
@@ -61,7 +94,7 @@ footer {
     background-position:290px -1448px;
 }
 #f-qod:hover {
-    background-color:#37597a;
+    background-color:#237abe;
     background-position:186px -1448px;
 }
 #f-htmlipsum {
@@ -80,7 +113,7 @@ footer {
     background-position:290px -1768px;
 }
 #f-bookshelf:hover {
-    background-color:#ff8400;
+    background-color:#237abe;
     background-position:186px -1768px;
 }
 #f-html-ipsum:hover p {
