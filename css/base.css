@@ -3,11 +3,21 @@
    pink: f200f5
    
 */
+/* ----- font face ---- */
+@font-face {
+  font-family: DR;
+  src: url('Delicious-Roman.otf') format("opentype");
+}
 
 /* ---- wrapper -----*/
 
-#box-container{
-   padding-left: 90px;
+#main-box-container{
+   margin: 0 auto;
+}
+
+#main-box-container .img-box-container{
+   padding-left:120px;
+
 }
 
 /*-- header --*/
@@ -33,6 +43,7 @@ nav{
 	color:#fff;
 	/*padding: 5px 10px 5px 10px;*/
 	/*margin: 15px;*/
+	margin-top: -70px;
 	background: #f200f5;
 	border: 2px dashed rgba(255,255,255,0.4);
 	-moz-border-radius: 6px;
@@ -43,11 +54,102 @@ nav{
 	box-shadow: 0 0 0 4px #e2e2e2, 2px 1px 6px 4px rgba(10,10,0,.5);
 }
 
-#nav{
-   width: 90px;
+/*#topnav{
+  margin-bottom:-50px;
+}*/
+
+#navlist li{
+margin-bottom:-80px;
+ display:inline;
+}
+
+/*--- paragraphs ---*/
+
+p{
+  box-sizing:border-box;
+-moz-box-sizing:border-box; /* Firefox */
+-webkit-box-sizing:border-box; /* Safari */
+width:50%;
+}
+
+.parabox{
+  width:60%;
+  -moz-column-count:3; /* Firefox */
+  -webkit-column-count:3; /* Safari and Chrome */
+  column-count:3;
+  /* this centers the text */
+  margin: 0 auto;
 }
 
 
+
+/* -- carousel -- */
+
+.wrapper {
+				background-color: white;
+				width: 480px;
+				margin: 40px auto;
+				padding: 50px;
+				box-shadow: 0 0 5px #999;
+			}
+			.list_carousel {
+				background-color: #ccc;
+				margin: 0 0 30px 60px;
+				width: 360px;
+			}
+			.list_carousel ul {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				display: block;
+			}
+			/* controls image size */
+			.list_carousel li {
+				font-size: 40px;
+				color: #999;
+				text-align: center;
+				background-color: #eee;
+				border: 5px solid #999;
+				width: 50px;
+				height: 250px;
+				padding: 0;
+				margin: 6px;
+				display: block;
+				float: left;
+			}
+			.list_carousel.responsive {
+				width: auto;
+				margin-left: 0;
+			}
+			.clearfix {
+				float: none;
+				clear: both;
+			}
+			.prev {
+				float: left;
+				margin-left: 10px;
+			}
+			.next {
+				float: right;
+				margin-right: 10px;
+			}
+			.pager {
+				float: left;
+				width: 300px;
+				text-align: center;
+			}
+			.pager a {
+				margin: 0 5px;
+				text-decoration: none;
+			}
+			.pager a.selected {
+				text-decoration: underline;
+			}
+			.timer {
+				background-color: #999;
+				height: 6px;
+				width: 0px;
+			}
 
 /*--- footer --*/
 footer{
@@ -81,6 +183,7 @@ footer{
 .footer-box {
     margin:0 0 10px 0;
     display:inline-block;
+	width: 80%;
     width:282px;
     height:220px;
     padding:15px;

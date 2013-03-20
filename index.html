@@ -17,6 +17,81 @@
 		<link rel="stylesheet" href="css/gridiculous.css">
 		<link rel="stylesheet" href="css/base.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+		<!-- include jQuery + carouFredSel plugin -->
+		<script type="text/javascript" language="javascript" src="js/jquery-1.8.2.min.js"></script>
+		<script type="text/javascript" language="javascript" src="js/jquery.carouFredSel-6.2.0-packed.js"></script>
+
+		<!-- optionally include helper plugins -->
+		<script type="text/javascript" language="javascript" src="helper-plugins/jquery.mousewheel.min.js"></script>
+		<script type="text/javascript" language="javascript" src="helper-plugins/jquery.touchSwipe.min.js"></script>
+		<script type="text/javascript" language="javascript" src="helper-plugins/jquery.transit.min.js"></script>
+		<script type="text/javascript" language="javascript" src="helper-plugins/jquery.ba-throttle-debounce.min.js"></script>
+		
+		<!-- fire plugin onDocumentReady -->
+		<script type="text/javascript" language="javascript">
+			$(function() {
+
+				//	Basic carousel, no options
+				$('#foo0').carouFredSel();
+
+				//	Basic carousel + timer, using CSS-transitions
+				$('#foo1').carouFredSel({
+					auto: {
+						pauseOnHover: 'resume',
+						progress: '#timer1'
+					}
+				}, {
+					transition: true
+				});
+
+				//	Scrolled by user interaction
+				$('#foo2').carouFredSel({
+					auto: false,
+					prev: '#prev2',
+					next: '#next2',
+					pagination: "#pager2",
+					mousewheel: true,
+					swipe: {
+						onMouse: true,
+						onTouch: true
+					}
+				});
+
+				//	Variable number of visible items with variable sizes
+				$('#foo3').carouFredSel({
+					width: 360,
+					height: 'auto',
+					prev: '#prev3',
+					next: '#next3',
+					auto: false
+				});
+                 // using this one for hopesbears layout
+				//	Responsive layout, resizing the items
+				$('#foo4').carouFredSel({
+					responsive: true,
+					prev: '#prev2',
+					next: '#next2',
+					auto: false,
+					width: '100%',
+					scroll: 2,
+					items: {
+						width: 400,
+					//	height: '30%',	//	optionally resize item-height
+						visible: {
+							min: 2,
+							max: 6
+						}
+					}
+				});
+
+				//	Fuild layout, centering the items
+				$('#foo5').carouFredSel({
+					width: '100%',
+					scroll: 2
+				});
+
+			});
+		</script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -27,30 +102,73 @@
 		<div id="">
 		<div id="grid w960">
 		    <!-- header -->
+			
+					
 		    <header class="row">			
 			    <article class="c12">
-				    <p>Hello world! This is HTML5 Boilerplate.</p>
+				   <img src="hb_dribbble2.png">
 				</article>
 			</header>
 			
-			
-			
-			 <nav class="row">			
+			 <nav class="row" id="nav">			
 			    <article class="c12">
-				    <p>Hello world! This is HTML5 Boilerplate.</p>
 				</article>
 			</nav>
+		
+		    <div id="topnav">			
+				    <ul id="navlist">
+							<li><a href="#">Home</a></li>
+							<li><a href="#">About</a></li>
+							<li><a href="#">Store</a></li>
+							<li><a href="#">Contact</a></li>
+					</ul>
+			</div>
 			
 			<!-- Content section 1 -->
 			<section class="row">			
 			    <article class="c12">
-				    <p>Hello world! This is HTML5 Boilerplate.</p>
+				    <div class="list_carousel responsive">
+						<ul id="foo4">
+							<li><img src="img/img1_small.jpg"></li>
+							<li><img src="img/img2_small.jpg"></li>
+							<li><img src="img/img3_small.jpg"></li>
+							<li><img src="img/img4_small.jpg"></li>
+							<li><img src="img/img5_small.jpg"></li>
+							<li><img src="img/img6_small.jpg"></li>
+							<li><img src="img/img7_small.jpg"></li>
+							<li><img src="img/img8_small.jpg"></li>
+							<li><img src="img/img10_small.jpg"></li>
+							<li><img src="img/img11_small.jpg"></li>
+							<li><img src="img/img1_small.jpg"></li>
+							<li><img src="img/img2_small.jpg"></li>
+							<li><img src="img/img1_small.jpg"></li>
+							<li><img src="img/img2_small.jpg"></li>
+						</ul>
+						<a id="prev2" class="prev" href="#">&lt;</a>
+						<a id="next2" class="next" href="#">&gt;</a>
+						<div id="pager2" class="pager"></div>
+						<div class="clearfix"></div>
+					</div>
 				</article>				
 			</section>
 			
+			<section class="row">
+			   
+			   <article class="2">
+			   <p class="parabox">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae purus nec sem tincidunt condimentum at ac ante. Nam ultricies nisl in lorem auctor posuere. Etiam quam dolor, tincidunt non viverra ut, lacinia eget ligula. Integer in elementum lectus. Maecenas ac tempor lectus. Proin eget sapien ut risus vestibulum ultrices id quis nunc. Integer id velit massa, sed tincidunt urna
+			   </p>
+			   </article>
+			   
+			</section>
+			
+			<section class="row">
+			&nbsp;
+			</section>
+			
 			<!-- Content section 2 -->
-			<section id="box-container" class="row">
-                    <article class="center">			
+			<section id="main-box-container" class="row">
+                    <article class="img-box-container">			
 							<article class="c4">
 								<a class="footer-box" id="f-qod" href="http://sean-fallon.com">
 									  <h5>Quotes on Design</h5>
